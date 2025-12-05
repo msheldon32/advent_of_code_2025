@@ -90,13 +90,17 @@ int main() {
 
 	line_buffer.push_back(get_padding());
 
+	int n_iterations = 9;
+
 	while (true) {
 		int new_options = get_options(line_buffer);
 		if (new_options == 0) break;
 		total_options += new_options;
+		n_iterations ++;
 	}
 
 	std::cout << "total options: " << total_options << std::endl;
+	std::cout << "total iterations: " << n_iterations << std::endl;
 
 	return 0;
 }
